@@ -1,0 +1,667 @@
+{
+	"info": {
+		"_postman_id": "4ed8397b-87fd-46f0-803b-b1ec7ddb0e69",
+		"name": "Trello API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32236524"
+	},
+	"item": [
+		{
+			"name": "Create VaultN Board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/boards/?name={{name}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{name}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Backlog on List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}lists?name=Backlog&idBoard={{board_id}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Backlog"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{board_id}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo on List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}lists?name=Todo&idBoard={{board_id}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Todo"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{board_id}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Doing on List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}lists?name=Doing&idBoard={{board_id}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Doing"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{board_id}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Testing on List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}lists?name=Testing&idBoard={{board_id}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Testing"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{board_id}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Done on List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}lists?name=Done&idBoard={{board_id}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Done"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{board_id}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create \"Sign up for Trello\" in Todo List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards?name=Sign+up+for+Trello&idList={{list_id_Todo}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sign+up+for+Trello"
+						},
+						{
+							"key": "idList",
+							"value": "{{list_id_Todo}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create \"Get key and token\" in Todo List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards?name=Get+key+and+Token&idList={{list_id_Todo}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Get+key+and+Token"
+						},
+						{
+							"key": "idList",
+							"value": "{{list_id_Todo}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create \"Build a collection\" in Todo List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards?name=Build+a+collection&idList={{list_id_Todo}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Build+a+collection"
+						},
+						{
+							"key": "idList",
+							"value": "{{list_id_Todo}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create \"Working on Task\" in Todo List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards?name=Working+on+Task&idList={{list_id_Todo}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Working+on+Task"
+						},
+						{
+							"key": "idList",
+							"value": "{{list_id_Todo}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create \"UI Automation\" in Backlog List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards?name=UI+Automation&idList={{backlog_id_list}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "UI+Automation"
+						},
+						{
+							"key": "idList",
+							"value": "{{backlog_id_list}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create \"Writing Test Scenarios\" in Backlog List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards?name=Writing+Test+Scenarios&idList={{backlog_id_list}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Writing+Test+Scenarios"
+						},
+						{
+							"key": "idList",
+							"value": "{{backlog_id_list}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move \"Sign up for Trello\" to Done List",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards/{{Signup_card_id}}?idList={{done_list_id}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"path": [
+						"{{Signup_card_id}}"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "{{done_list_id}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move \"Get key and token\" to Testing lIst",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards/{{Get_key_card_id}}?idList={{Testing_list_id}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"path": [
+						"{{Get_key_card_id}}"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "{{Testing_list_id}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move \"Build a collection\" to Doing lIst",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards/{{Build_collection_card_id}}?idList={{Doing_list_id}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"path": [
+						"{{Build_collection_card_id}}"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "{{Doing_list_id}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move \"Working On Task\" to Doing lIst",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cards/{{Working_card_id}}?idList={{Doing_list_id}}&key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}cards"
+					],
+					"path": [
+						"{{Working_card_id}}"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "{{Doing_list_id}}"
+						},
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete \"VaultN\" Board",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}boards/{{board_id}}?key={{trello_api_key}}&token={{trello_api_token}}",
+					"host": [
+						"{{url}}boards"
+					],
+					"path": [
+						"{{board_id}}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trello_api_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_api_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "trello_api_key",
+			"value": "cfcf1a7775b82444bac6bb1f6d1a4e1e"
+		},
+		{
+			"key": "trello_api_token",
+			"value": "ATTAa7038e0dd3a39d5070da1bf3bb65f2f2c66e073702a173a744ed348bde5486162646AE58"
+		},
+		{
+			"key": "name",
+			"value": "VaultN"
+		},
+		{
+			"key": "list_name",
+			"value": "backlog"
+		},
+		{
+			"key": "board_id",
+			"value": "675b0ed81350fdd7ade60fa3"
+		},
+		{
+			"key": "list_id_Todo",
+			"value": "675b15649ff29ca7f7f0de02"
+		},
+		{
+			"key": "todo_list_id",
+			"value": "675b15649ff29ca7f7f0de02"
+		},
+		{
+			"key": "url",
+			"value": "https://api.trello.com/1/"
+		},
+		{
+			"key": "backlog_id_list",
+			"value": "675b2459a0d9da4fae7cbf84"
+		},
+		{
+			"key": "backlog_list_id",
+			"value": "675b2459a0d9da4fae7cbf84"
+		},
+		{
+			"key": "card_id",
+			"value": "675b24fdd085642904fc90dc"
+		},
+		{
+			"key": "Signup_card_id",
+			"value": "675b24fdd085642904fc90dc"
+		},
+		{
+			"key": "done_list_id",
+			"value": "675b24bb078d57034d11ee52"
+		},
+		{
+			"key": "Testing_list_id",
+			"value": "675b24a68b296e23b16ec5a1"
+		},
+		{
+			"key": "Get_key_card_id",
+			"value": "675b258dd0c10ba0700a4b0f"
+		},
+		{
+			"key": "Build_collection_card_id",
+			"value": "675b25db8c3424d0ce01db86"
+		},
+		{
+			"key": "Doing_list_id",
+			"value": "675b2496d22ea10fcdff4ea4"
+		},
+		{
+			"key": "Working_card_id",
+			"value": "675b260e37bba4bf09caa770"
+		},
+		{
+			"key": "trello_token",
+			"value": "e0feb53df00acfff44255c7a7477f3da0b28a8764c41745a42761a5fe8dbacf7"
+		},
+		{
+			"key": "board_id1",
+			"value": "675b3f9cfcb1fda5f463af95"
+		}
+	]
+}
